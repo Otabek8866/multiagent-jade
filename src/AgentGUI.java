@@ -231,28 +231,28 @@ public class AgentGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jButton1.setEnabled(false);
-        jButton2.setEnabled(true);
-//        try {
-//            this.target_ip = InetAddress.getByName(jTextField4.getText());
-//        } catch (UnknownHostException ex) {
-//            Logger.getLogger(AgentGUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        this.port = Integer.parseInt(jTextField5.getText());
-//        this.session_time = Integer.parseInt(jTextField2.getText());
-//        this.message = jTextField3.getText();
-//        this.total_num_agent = Integer.parseInt(jTextField1.getText());
+            jButton1.setEnabled(false);
+            jButton2.setEnabled(true);
+           try {
+               this.target_ip = InetAddress.getByName(jTextField4.getText());
+           } catch (UnknownHostException ex) {
+               Logger.getLogger(AgentGUI.class.getName()).log(Level.SEVERE, null, ex);
+           }
+           this.port = Integer.parseInt(jTextField5.getText());
+           this.session_time = Integer.parseInt(jTextField2.getText());
+           this.message = jTextField3.getText();
+           this.total_num_agent = Integer.parseInt(jTextField1.getText());
         
         // this is testing. Delete this block 
-        try {
-            this.target_ip = InetAddress.getByName("127.0.0.1");
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(AgentGUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        port = 8888;
-        session_time = 10000;
-        message = "2";
-        total_num_agent = 10000;
+//         try {
+//             this.target_ip = InetAddress.getByName("127.0.0.1");
+//         } catch (UnknownHostException ex) {
+//             Logger.getLogger(AgentGUI.class.getName()).log(Level.SEVERE, null, ex);
+//         }
+//         port = 8888;
+//         session_time = 10000;
+//         message = "2";
+//         total_num_agent = 10000;
         
         GuiEvent ge = new GuiEvent(this, 1);
         master_agent.postGuiEvent(ge);
