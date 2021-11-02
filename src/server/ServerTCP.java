@@ -1,7 +1,5 @@
-package server;
-
-import java.net.*;	// need this for InetAddress, Socket, ServerSocket
-import java.io.*;	// need this for I/O stuff
+import java.net.*; // need this for InetAddress, Socket, ServerSocket
+import java.io.*; // need this for I/O stuff
 
 public class ServerTCP extends Thread {
 
@@ -14,7 +12,7 @@ public class ServerTCP extends Thread {
 
     public static void main(String[] args) {
         try {
-            //initialize the server
+            // initialize the server
             ServerSocket sever = new ServerSocket(8888);
             System.out.println("Server is listening on port " + "8888" + "\n");
 
@@ -40,20 +38,20 @@ public class ServerTCP extends Thread {
 
         byte[] buff = new byte[BUFSIZE];
 
-        //Set up streams
+        // Set up streams
         InputStream in = s.getInputStream();
         // writer to client
         PrintWriter writer = new PrintWriter(s.getOutputStream(), true);
 
-        //read/write loop
+        // read/write loop
         while (in.read(buff) != -1) {
             String request = new String(buff).trim();
             String result;
 
-            //calculations
+            // calculations
             result = fibonacci(Integer.parseInt(request));
 
-            //responding to client
+            // responding to client
             writer.println(result);
             writer.flush();
 
@@ -70,8 +68,10 @@ public class ServerTCP extends Thread {
         }
     }
 
-    public static String fibonacci(int req) {
-        int a = 1, b = 0, temp;
+    public static String fibonacci(Long req) {
+        Long a = new Long(1);
+        Long b = new Long(0);
+        Long temp;
 
         while (req >= 0) {
             temp = a;
@@ -79,6 +79,6 @@ public class ServerTCP extends Thread {
             b = temp;
             req--;
         }
-        return Integer.toString(b);
+        return Long.toString(b);
     }
 }
