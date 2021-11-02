@@ -72,6 +72,7 @@ public class ServerTCP extends Thread {
         Long a = new Long(1);
         Long b = new Long(0);
         Long temp;
+        int h = 0;
 
         while (req >= 0) {
             temp = a;
