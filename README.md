@@ -54,6 +54,7 @@ Figure 5: Sniffer agent showing the communication between the agents and archite
 
 Figure 6: Launch template
 
+
 2.	Creating a load balancer for TCP traffic on the port 80.
 
 
@@ -61,6 +62,7 @@ Figure 6: Launch template
 
 
 Figure 7: Load Balancer
+
 
 3.	A target group is created for TCP port 80. 
 
@@ -77,7 +79,8 @@ Figure 8: Target Group
 
 
 Figure 9: Group size for AutoScaling
- 
+
+
 5.	Scaling Policy based on CPU utilization
 
 
@@ -85,6 +88,7 @@ Figure 9: Group size for AutoScaling
 
 
 Figure 9: Target tracking policy
+
 
 6.	Before starting the attack (only one instance)
 
@@ -94,22 +98,44 @@ Figure 9: Target tracking policy
 
 Figure 10: Instances for Autoscaling group
 
+
 7.	Agents start attacking
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186989-48af9531-5e2d-4a1c-8f6f-6784738f7761.png) 
+
+
 Figure 11: Architect GUI 
 
+
 8.	Checking the CPU utilization of the first instance
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140187002-fa374e5a-9a4e-4b0a-b76e-e16d5de767b1.png)
+
+
 Figure 12: The default instance CPU utilization 
- 
+
+
 9.	Additional 3 instances are added due to the increase in the CPU utilization of the first instance
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140187031-2ee00415-b5fa-4786-8c3f-33a05a7a9172.png)
+
+
 Figure 13: All the instances
 
+
 10.	Checking the AutoScaling group (4 instances)
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140187050-adbe0d0d-6cd0-4de9-95e2-3122fbc04386.png)
+
+
 Figure 13: AutoScaling group
- 
+
+
+
 # Part III: The war of worlds
 
 1.	The AWS EC2 instance that was created for TCP Server can handle no more than 2000 sockets at a time. When we attacked with 4000 agents, it ran out of the resources and did not respond to even any primitive commands (cd, ls etc.) 
