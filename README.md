@@ -47,28 +47,51 @@ Figure 5: Sniffer agent showing the communication between the agents and archite
 # Part II: No Pasaran (Server-side)
 
 1.	We created an EC2 instance on AWS and implemented a multi-threaded TCP Server in Java. From that instance, we created an AMI image to create a launch template. Since we did not deploy any Server Platform(Apache Server, etc), we need to run a java file manually. We can make the process automatic by adding the user data to the template. Whenever a new instance is created, it runs this user data first.
- 
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186834-1477865f-bc26-4ebf-995f-98d80884476f.png)
+
+
 Figure 6: Launch template
 
 2.	Creating a load balancer for TCP traffic on the port 80.
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186857-b82d9636-9b91-4b9b-9c6b-2f3b3af60166.png)
+
+
 Figure 7: Load Balancer
 
 3.	A target group is created for TCP port 80. 
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186874-9fb2aa8e-cec0-4237-915c-87204835f205.png)
+
+
 Figure 8: Target Group
 
 4.	Specifying the group size for AutoScaling
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186904-556bad38-4987-4ae0-a3d8-bdfaa0e116be.png)
+
+
 Figure 9: Group size for AutoScaling
  
 5.	Scaling Policy based on CPU utilization
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186949-32cb5caf-febe-449f-9b53-4c641cab8034.png)
+
+
 Figure 9: Target tracking policy
 
 6.	Before starting the attack (only one instance)
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186967-712f20eb-4597-48d8-966d-10401353f3f0.png)
+
+
 Figure 10: Instances for Autoscaling group
 
 7.	Agents start attacking
