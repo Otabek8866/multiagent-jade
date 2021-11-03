@@ -9,7 +9,9 @@ This work is a part of my Lab class.
 
 # Part I: The agents attack (Client-side)
 
+
 ![image](https://user-images.githubusercontent.com/55482580/140186678-29ea85a2-03bd-455e-a15c-fcc5045d5597.png)
+
 Figure 1:
 
 Figure 1 shows the Gui interface for the coordinator agent. Coordinator agent takes the following parameters from the user via Gui:
@@ -22,17 +24,23 @@ Once the attack button is pressed, the coordinator agent creates the requested n
 Agent Console shows the log of the requests that are sent and the replies that are received.
 
 ![image](https://user-images.githubusercontent.com/55482580/140186710-0de984a1-2438-4d4d-8ee5-2d0241d4544f.png)
+
 Figure 2:
 
 Figure 2 shows the log of the TCP server. It displays the requests that are received and the replies that are sent back.
- 
+
+
 ![image](https://user-images.githubusercontent.com/55482580/140186733-df16eac2-6363-4048-b5f6-3a019c930121.png)
+
 Figure 3: AWS instance running TCP server
 
 ![image](https://user-images.githubusercontent.com/55482580/140186752-c520f7e0-66a0-487b-929f-5e45d0246f28.png) 
+
 Figure 4: Jade agent management gui showing all the launched agents
 
+
 ![image](https://user-images.githubusercontent.com/55482580/140186770-96be2b41-0467-4dc1-ab12-7835db20710f.png)
+
 Figure 5: Sniffer agent showing the communication between the agents and architect
 
 
