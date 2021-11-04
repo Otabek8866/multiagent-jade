@@ -15,11 +15,17 @@ This work is a part of my Lab class.
 Figure 1:
 
 Figure 1 shows the Gui interface for the coordinator agent. Coordinator agent takes the following parameters from the user via Gui:
+
 ●	Number of Agents: Number of agent smiths to be launched
+
 ●	Session Time: The ticker time, time after which same request is sent again
+
 ●	Message: Nth term of fin
+
 ●	IP: IP address for the TCP server
+
 ●	Port: Port number for the TCP server
+
 Once the attack button is pressed, the coordinator agent creates the requested number of agents. Each agent sends a request to the TCP server after every session time interval to calculate the Nth term of fibonacci sequences using the iterative algorithm.
 Agent Console shows the log of the requests that are sent and the replies that are received.
 
