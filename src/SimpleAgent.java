@@ -15,6 +15,7 @@ public class SimpleAgent extends Agent {
     int session_time;
     String msg;
     String report_to_architect;
+    String architect_ip;
 
     @Override
     public void setup() {
@@ -23,6 +24,7 @@ public class SimpleAgent extends Agent {
         port = (int) obj[1];
         session_time = (int) obj[2];
         msg = (String) obj[3];
+        architect_ip = (String) obj[4];
         
         System.out.println("Agent Created: " + getAID().getName());
 //        System.out.println("Platform: " + getAID().getAllAddresses());
@@ -71,6 +73,7 @@ public class SimpleAgent extends Agent {
 
         public void action() {
             ACLMessage msg;
+            //String receiverName = architect_ip;
             String receiverName = "Architect@10.0.1.222:1099/JADE";
             String messageContent = report_to_architect;
 
